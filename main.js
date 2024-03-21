@@ -6,7 +6,7 @@ function randomValueFromArray(array){
   const random = Math.floor(Math.random()*array.length);
   return array[random];
 }
-var storyText = "It was 94 fahrenheit outside, so :insertX: went for a walk. When they got to :insertY:, they stared in horror for a few moments, then :insertZ:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day."
+var storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day."
 
 const insertX = ["Willy the Goblin","Big Daddy","Father Christmas"];
 
@@ -18,15 +18,15 @@ randomize.addEventListener('click', result);
 
 function result() {
 
-    let newStory = storyText;
+let newStory = storyText;
 
-var xItem = randomValueFromArray(insertX);
-var yItem = randomValueFromArray(insertY);
-var zItem = randomValueFromArray(insertZ);
+const xItem = randomValueFromArray(insertX);
+const yItem = randomValueFromArray(insertY);
+const zItem = randomValueFromArray(insertZ);
 
-newStory = newStory.replaceAll(':insertX', xItem)
-newStory = newStory.replaceAll(':insertY', yItem)
-newStory = newStory.replaceAll(':insertZ', zitem)
+newStory = newStory.replaceAll(`:insertx`, xItem);
+newStory = newStory.replaceAll(`:inserty`, yItem);
+newStory = newStory.replaceAll(`:insertz`, zItem);
 
 
 
