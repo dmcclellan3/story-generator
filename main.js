@@ -37,8 +37,14 @@ newStory = newStory.replaceAll(`:insertz`, zItem);
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
+    let weight = Math.round(300/14)
+    weight = weight + ` stone`;
+    let temperature =  Math.round((94-32)*5/9);
+    temperature = temperature + ` centigrade`;
+    
+    newStory = newStory.replaceAll(`300 pounds`, weight)
+    newStory = newStory.replaceAll(`94 fahrenheit`, temperature)
+    
 
   }
 
